@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Ordenes</h2>
+
+<div class="card">
+    <div class="card-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <p>Nombre Cliente:</p>
+                </div>
+                <div class="col-sm-10">
+                    <input class="form-control" placeholder="Nombre Cliente" id="cliente" name="NombreCliente" autocomplete="off"  />
+                </div>
+
+            </div>
+            <div class="row mt-2">
+
+                <div class="col d-grid gap-2 col-4 float-end">
+                    <input type="submit" class="btn btn-primary btnbuscar" value="Buscar" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="card mt-4 panel-body">
+    <div class="table-responsive">
+        <div class="d-grid gap-2 col-3 float-end">
+            <input type="submit" class="btn btn-primary btnnuevo" id="btnnuevo" value="Nuevo" />
+        </div>
+        <table class="table Tableper" id="grvResult" style="width: 100%;">
+            <thead>
+                <tr>
+                    <th scope="col">Nro Pedido</th>
+                    <th scope="col">Cliente</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Sub Total</th>
+                    <th scope="col">Impuesto</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+        </table>
+       
+    </div>
+    <div class="modal fade" id="modalRegister" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width:800px !important">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ordenes</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="txtNumPedido" class="col-form-label">Nro. Pedido:</label>
+                            <input type="text" class="form-control" id="txtNumPedido" style="width:100px"  autocomplete="off">
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtName" class="col-form-label">Nombre Cliente:</label>
+                            <input type="text" class="form-control" id="txtName" style="width:400px" autocomplete="off">
+                        </div>
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col-sm-4 ">
+                                    <label for="slcProductos" class="col-form-label">Producto:</label>
+                                    <select class="form-control btn-radius" id="slcProductos"></select>
+                                </div>
+                                <div class="col-sm-3 ">
+                                    <label for="txtPrecio" class="col-form-label">Precio:</label>
+                                    <input type="text" class="form-control" id="txtPrecio" autocomplete="off" readonly>
+                                </div>
+                                <div class="col-sm-3 ">
+                                    <label for="txtCantidad" class="col-form-label">Cantidad:</label>
+                                    <input type="text" class="form-control" style="width:100px" id="txtCantidad" onkeypress="return onlyNum(event);">
+                                </div>
+                                <div class="col-sm-3">
+                                    <button id="btnAgregarProducto" type="button" class="btn btn-blue btn-radius"><i class="icon ti-plus" style="padding-right:5px;"></i>Agregar</button>
+                                </div>
+                            </div>
+                            <div class="row"> <div class="col-sm-3"> <br /> </div> </div>
+                            <div class="panel-body" style="padding-top:0px;">
+                                <div class="table-responsive">
+                                    <table class="table Tableper" id="grvResultProducto" style="width:100%;">
+                                        <thead>
+                                            <tr>
+                                                <th style="width:5%">Id</th>
+                                                <th style="width:30%">Producto</th>
+                                                <th style="width:15%">Cantidad</th>
+                                                <th style="width:35%">Precio Unidad</th>
+                                                <th>Eliminar</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                            <label for="txtSubTotal" class="col-form-label">Sub Total:</label>
+                                <input type="text" class="form-control" id="txtSubTotal" style="width:100%;text-align: right;" readonly>
+                        </div>
+                            <div class="col-sm-3">
+                            <label for="txtImpuesto" class="col-form-label">Impuestos:</label>
+                                <input type="text" class="form-control" id="txtImpuesto" style="width:100%;text-align: right;" readonly>
+                        </div>
+                            <div class="col-sm-3">
+                            <label for="txtTotal" class="col-form-label">Total:</label>
+                                <input type="text" class="form-control" id="txtTotal" style="width:100%;text-align: right;" readonly>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btnFacturar" class="btn btn-primary">Imprimir Factura</button>
+                    <button type="button" id="btnImprimirComanda" class="btn btn-primary">Imprimir Comanda</button>
+                    <button type="button" id="btnRegistrar" class="btn btn-primary">Registrar</button>
+                    <button type="button" class="btn btn-default btncerrarregister" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/Ordenes.js"></script>
+

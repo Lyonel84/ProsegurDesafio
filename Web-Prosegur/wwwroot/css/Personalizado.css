@@ -1,0 +1,322 @@
+﻿body {
+}
+
+.ui-widget-header .ui-icon {
+    background-image: url(images/ui-icons_ffffff_256x240.png);
+}
+
+.ui-icon, .ui-widget-content .ui-icon {
+    background-image: url(images/ui-icons_ffffff_256x240.png);
+}
+
+.ui-icon-circle-triangle-w {
+    background-position: -80px -192px;
+}
+
+.ui-icon-circle-triangle-e {
+    background-position: -48px -192px;
+}
+
+.ui-icon {
+    width: 16px;
+    height: 16px;
+}
+
+@media (min-width: 1200px) and (max-width: 1740px) {
+    .col-lg-2p {
+        width: 33.33333333%;
+    }
+
+    .col-lg-3p {
+        width: 33.33333333%;
+    }
+}
+
+@media (min-width: 1741px) {
+    .col-lg-3p {
+        width: 23%;
+    }
+
+    .col-lg-2p {
+        width: 21%;
+    }
+
+    .col-lg-1p {
+        width: 10%;
+    }
+
+    .col-lg-3r {
+        width: 25%;
+    }
+
+    .clusterr {
+        padding-right: 0px;
+    }
+
+    .col-lg-1r {
+        width: 10%;
+    }
+}
+
+
+@media (min-width: 1200px) and (max-width: 1740px) {
+    .col-botones {
+        width: 33.33333333%; /*22.22222223%;*/
+    }
+}
+
+@media (min-width: 993px) {
+    .combosOkr {
+        padding-right: 0px;
+    }
+}
+
+@media (min-width: 990px) and (max-width: 1740px) {
+    .combosReporte1 {
+        padding-right: 0px;
+    }
+}
+
+@media (max-width: 990px) {
+    .combosReporte2 {
+        padding-right: 0px;
+    }
+}
+
+@media (min-width: 1740px) {
+    .combosReporte3 {
+        padding-right: 0px;
+    }
+}
+
+.progress {
+    position: relative;
+}
+
+    .progress span {
+        position: absolute;
+        display: block;
+        width: 100%;
+        color: black;
+    }
+
+.btn-white-table {
+    background-color: #ffffff;
+    border: 0px;
+    color: #707780;
+    position: relative;
+    display: block;
+}
+
+/*Diseño de las Tablas OKR*/
+table.Tableper {
+    /*border: 1px solid #ddd !important;*/
+    background: #273148 !important;
+    border-bottom-width: 0px !important;
+}
+
+    table.Tableper th {
+        vertical-align: middle !important;
+        text-align: center;
+        border-left: 1px solid #ddd !important;
+        border-bottom: 1px solid #ddd !important;
+    }
+
+        table.Tableper th.NoBorderLeft {
+            border-left: 0 !important;
+        }
+
+        table.Tableper th:nth-child(1) {
+            /*border-left: 0 !important;*/
+        }
+
+    table.Tableper td {
+        vertical-align: top !important;
+        text-align: center;
+        border-left: 1px solid #ddd;
+    }
+
+        table.Tableper td.NoBorderLeft {
+            border-left: 0 !important;
+        }
+
+        table.Tableper td:nth-child(1) {
+            /*border-left: 0 !important;*/
+        }
+
+    table.Tableper tr:nth-last-child(1) td {
+        border-bottom: 1px solid #ddd !important;
+    }
+
+    table.Tableper td:nth-last-child(1) {
+        border-right: 1px solid #ddd !important;
+    }
+
+    table.Tableper td.Izquierda {
+        text-align: left;
+    }
+
+    table.Tableper td.NoWrap {
+        white-space: nowrap;
+    }
+
+    table.Tableper thead tr {
+        background: #0f1c50;
+        color: white;
+    }
+
+    table.Tableper tbody tr {
+        background: #f9fafb !important;
+    }
+
+/*5 columnas en Row Boostrap*/
+.col-xs-5-1ths,
+.col-sm-5-1ths,
+.col-md-5-1ths,
+.col-lg-5-1ths,
+.col-xs-5-2ths,
+.col-sm-5-2ths,
+.col-md-5-2ths,
+.col-lg-5-2ths,
+.col-xs-5-3ths,
+.col-sm-5-3ths,
+.col-md-5-3ths,
+.col-lg-5-3ths,
+.col-xs-5-4ths,
+.col-sm-5-4ths,
+.col-md-5-4ths,
+.col-lg-5-4ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+/*1 de 5*/
+
+.col-xs-5-1ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5-1ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5-1ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5-1ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+/*2 de 5*/
+
+.col-xs-5-2ths {
+    width: 40%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5-2ths {
+        width: 40%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5-2ths {
+        width: 40%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5-2ths {
+        width: 40%;
+        float: left;
+    }
+}
+
+/*3 de 5*/
+
+.col-xs-5-3ths {
+    width: 60%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5-3ths {
+        width: 60%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5-3ths {
+        width: 60%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5-3ths {
+        width: 60%;
+        float: left;
+    }
+}
+
+/*4 de 5*/
+
+.col-xs-5-4ths {
+    width: 80%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5-4ths {
+        width: 80%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5-4ths {
+        width: 80%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5-4ths {
+        width: 80%;
+        float: left;
+    }
+}
+
+/*sdsaa*/
+.col-xs-offset-5-1ths,
+.col-sm-offset-5-1ths,
+.col-md-offset-5-1ths,
+.col-lg-offset-5-1ths {
+    margin-left: 20%
+}
+
+
+.col-xs-offset-5-2ths,
+.col-sm-offset-5-2ths,
+.col-md-offset-5-2ths,
+.col-lg-offset-5-2ths {
+    margin-left: 40%
+}
